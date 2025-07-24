@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<h2>Bai 1</h2>
+<input type="date" id="date1">
+<button onclick="nut()">check</button>
+<p id="ketqua"></p>
+<script>
+    function nut() {
+        const date1 = document.getElementById("date1");
+        const ketqua = document.getElementById("ketqua");
+        if (!date1.value) {
+            ketqua.innerText = "Vui long chon ngay";
+            return;
+        }
+        const selected = new Date(date1.value);
+        const today = new Date();
+        selected.setHours(0, 0, 0, 0);
+        today.setHours(0, 0, 0, 0);
+        if (selected < today) {
+            ketqua.innerText = "Ngay duoc chon la ngay truoc hom nay";
+        } else if (selected > today) {
+            ketqua.innerText = "Ngay duoc chon la ngay sau hom nay";
+        } else {
+            ketqua.innerText = "Ngay duoc chon la ngay hom nay";
+        }
+    }
+</script>
+
+<body>
+
+</html>
