@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log MyDate</title>
+</head>
+<body>
+    <input type="date" id="inputDate">
+    <button id="Print">Print</button>
+    <p id="result"> </p>
+    <script>
+        var Print = document.getElementById("Print");
+        var inputDate = document.getElementById("inputDate");
+        var result = document.getElementById("result");
+        Print.onclick = () => {
+            var myDate = new Date(inputDate.value);
+            console.log(myDate);
+        }
+    </script>
+</body>
+</html>
